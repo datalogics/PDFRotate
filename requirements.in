@@ -1,0 +1,12 @@
+dl_val_toolkit~=2.0
+dl_signing_tools
+invoke
+pyflakes
+flake8
+pycodestyle
+isort
+pipdeptree
+cmake<4.0.0
+clang-format
+pre-commit
+dl-pre-commit-hooks

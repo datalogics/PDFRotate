@@ -1,0 +1,15 @@
+#pragma once
+
+#define DLCOMP_MAJOR_VER            @ROTATE_MAJOR_VER@
+#define DLCOMP_MINOR_VER            @ROTATE_MINOR_VER@
+#define DLCOMP_REL_VER              @ROTATE_RELEASE_VER@
+#define MyAppVersion "@ROTATE_MAJOR_VER@.@ROTATE_MINOR_VER@.@ROTATE_RELEASE_VER@"
+
+#define MyRegKey "PDF Rotate"
+#define MyAppName "PDF Rotate"
+#define MyAppFolder "PDF Rotate"
+#define MyAppPublisher "Datalogics Inc."
+#define MyAppURL "http://www.datalogics.com/"
+#define MyAppExeName "pdfrotate.exe"
+#define MyAppSetupName "PDF_Rotate_Win64_"
+#define MyCopyright "Copyright 2026 Datalogics, Inc. All Rights Reserved"

@@ -1,0 +1,14 @@
+# Build folder
+build/**
+CMakeUserPresets.json
+
+# Build artifacts
+Datalogics.bmp
+Datalogics.ico
+
+# Environment
+python-env-*/
+requirements.txt
+
+/.mkenv
+/Installers/

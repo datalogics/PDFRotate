@@ -1,0 +1,5 @@
+# CLU_PDF_Rotate version, consumed by conanfile.py
+adobe_pdf_library: adobe_pdf_library/[>=18.0.5 <19]@datalogics/nightly
+
+CLU_PDF_Rotate:
+    version: 1.0.0

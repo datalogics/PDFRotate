@@ -1,0 +1,101 @@
+---
+# Config file for the project. Used by the Invoke tasks, primarily.
+config:
+  # Basic configuration variables
+  global:
+    config_url: git@github.com:datalogics/conan-config.git
+
+    # Regex that indicates a release branch
+    stable_branch_pattern: release-.*
+    new_conan_tools: true
+    cmake_install_after_build: true
+
+  macos-15-x86_64:
+    config:
+      Release:
+        profile_host:
+          - apple-clang-16.4-intel-cppstd-17
+        profile_build:
+          - apple-clang-16.4-intel-cppstd-17
+        build:
+          - missing
+      Debug:
+        include: Release
+        settings_host:
+          - build_type=Debug
+
+  macos-15-arm64:
+    config:
+      Release:
+        profile_host:
+          - apple-clang-16.4-arm-cppstd-17
+        profile_build:
+          - apple-clang-16.4-arm-cppstd-17
+        build:
+          - missing
+      Debug:
+        include: Release
+        settings_host:
+          - build_type=Debug
+
+  rocky-8-x86_64:
+    config:
+      Release:
+        profile_host:
+          - clang-18-linux-x86_64-cppstd-17
+        profile_build:
+          - clang-18-linux-x86_64-cppstd-17
+        build:
+          - missing
+      Debug:
+        include: Release
+        settings_host:
+          - build_type=Debug
+    packaging:
+      configs:
+        - Release
+        - Debug
+
+  rocky-8-aarch64:
+    config:
+      Release:
+        profile_host:
+          - clang-18-linux-armv8-cppstd-17
+        profile_build:
+          - clang-18-linux-armv8-cppstd-17
+        build:
+          - missing
+      Debug:
+        include: Release
+        settings_host:
+          - build_type=Debug
+    packaging:
+      configs:
+        - Release
+        - Debug
+
+  windows-x86_64:
+    config:
+      Release:
+        profile_host:
+          - msvc-x64-194-cppstd-17
+        profile_build:
+          - msvc-x64-194-cppstd-17
+        build:
+          - missing
+        settings_host:
+          - adobe_pdf_library/*:build_type=RelWithDebInfo
+          - compiler.runtime=static
+          - compiler.runtime_type=Release
+        conf_host:
+          - tools.cmake.cmaketoolchain:generator=Ninja
+      Debug:
+        include: Release
+        settings_host:
+          - build_type=Debug
+          - compiler.runtime=dynamic
+          - compiler.runtime_type=Debug
+    packaging:
+      configs:
+        - Release
+        - Debug
